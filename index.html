@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Christmas Balls Song</title>
+        <link rel="stylesheet" href="styles/style.css">
+        <script src="scripts/script.js"></script>
+    </head>
+    
+    <body>
+        <div class="ball-container-wrapper" style="width: 100%; overflow: hidden;">
+            <div class="ball-container" onmouseover="PlaySound('c_note')" onmouseout="StopSound('c_note')">
+                <div class="stick">
+                </div>
+                <div class="circle">
+                    <div class="line"></div>
+                    <div class="shine"></div>
+                    <div class="bright"></div>
+                </div>
+                <audio id='c_note' src='c_note.mp3'>
+            </div>
+            <div class="cable"></div>
+            <div class="ball-container" onmouseover="PlaySound('d_note')" onmouseout="StopSound('d_note')">
+                <div class="stick">
+                </div>
+                <div class="circle">
+                    <div class="line"></div>
+                    <div class="shine"></div>
+                    <div class="bright"></div>
+                </div>
+                <audio id='d_note' src='d_note.mp3'>
+            </div>
+            <div class="cable"></div>
+        </div>
+    </body>
+</html>
