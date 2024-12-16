@@ -7,29 +7,47 @@
     </head>
     
     <body>
-        <div class="ball-container-wrapper" style="width: 100%; overflow: hidden;">
+        <div class="ball-container-wrapper">
             <div class="ball-container" onmouseover="PlaySound('c_note')" onmouseout="StopSound('c_note')">
-                <div class="stick">
-                </div>
+                
                 <div class="circle">
+                    <div class="stick"></div>
                     <div class="line"></div>
                     <div class="shine"></div>
                     <div class="bright"></div>
                 </div>
-                <audio id='c_note' src='c_note.mp3'>
+                <audio id='c_note' src='sounds/do.wav'>
             </div>
-            <div class="cable"></div>
+            <div class="cable-container"> 
+                <div class="cable"></div>
+            </div>
+
             <div class="ball-container" onmouseover="PlaySound('d_note')" onmouseout="StopSound('d_note')">
-                <div class="stick">
-                </div>
                 <div class="circle">
+                    <div class="stick"></div>
                     <div class="line"></div>
                     <div class="shine"></div>
                     <div class="bright"></div>
                 </div>
-                <audio id='d_note' src='d_note.mp3'>
+                <audio id='d_note' src='sounds/re.wav'>
             </div>
-            <div class="cable"></div>
+            <div class="cable-container"> 
+                <div class="cable"></div>
+            </div>
+
+            <div class="ball-container" onmouseover="PlaySound('e_note')" onmouseout="StopSound('d_note')">
+                <div class="circle">
+                    <div class="stick"></div>
+                    <div class="line"></div>
+                    <div class="shine"></div>
+                    <div class="bright"></div>
+                </div>
+                <audio id='e_note' src='sounds/mi.wav'>
+            </div>
+            <div class="cable-container"> 
+                <div class="cable"></div>
+            </div>
+
         </div>
     </body>
 </html>
