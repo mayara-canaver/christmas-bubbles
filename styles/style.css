@@ -22,7 +22,14 @@ body {
     justify-content: center;
     align-items: center;
     border-radius: 50px;
-    background: linear-gradient(rgba(2,0,36,1) 0%, rgba(121,9,9,1) 47%, rgb(126, 8, 8) 100%);
+}
+
+.circle.red {
+    background: linear-gradient(rgba(2,0,36,1) 0%, rgba(121,9,9,1) 47%, rgb(221, 63, 63) 100%);
+}
+
+.circle.green {
+    background: linear-gradient(rgba(2,0,36,1) 0%, rgb(2, 80, 43) 47%, rgb(2, 196, 121) 100%);
 }
 
 .stick {
@@ -53,25 +60,23 @@ body {
 }
 
 .bright {    
-    background: red;
     width: 120%;
     height: 120%;
     border-radius: 100px;
     opacity: 0%;
 }
 
+.bright.red {
+    background: red;
+}
+
+.bright.green {
+    background: rgb(5, 136, 23);
+}
+
 .circle:hover .bright{
-    opacity: 10%;
+    opacity: 15%;
 }
-
-
-
-.cable-container {
-    width: 200;
-    height: 100px;
-    display: flex;
-}
-
 
 .cable {
     width: 200px;
