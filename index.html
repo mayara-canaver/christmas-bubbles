@@ -8,46 +8,57 @@
     
     <body>
         <div class="ball-container-wrapper">
-            <div class="ball-container" onmouseover="PlaySound('c_note')" onmouseout="StopSound('c_note')">
-                
-                <div class="circle">
+            <div class="ball-container" >
+                <div class="circle red" onmouseover="playSound('c_note')" onmouseout="stopSound('c_note')">
                     <div class="stick"></div>
                     <div class="line"></div>
                     <div class="shine"></div>
-                    <div class="bright"></div>
+                    <div class="bright red"></div>
                 </div>
                 <audio id='c_note' src='sounds/do.wav'>
             </div>
-            <div class="cable-container"> 
+            <div> 
                 <div class="cable"></div>
             </div>
 
-            <div class="ball-container" onmouseover="PlaySound('d_note')" onmouseout="StopSound('d_note')">
-                <div class="circle">
+            <div class="ball-container">
+                <div class="circle green" onmouseover="playSound('d_note')" onmouseout="stopSound('d_note')">
                     <div class="stick"></div>
                     <div class="line"></div>
                     <div class="shine"></div>
-                    <div class="bright"></div>
+                    <div class="bright green"></div>
                 </div>
                 <audio id='d_note' src='sounds/re.wav'>
             </div>
-            <div class="cable-container"> 
+            <div> 
                 <div class="cable"></div>
             </div>
 
-            <div class="ball-container" onmouseover="PlaySound('e_note')" onmouseout="StopSound('d_note')">
-                <div class="circle">
+            <div class="ball-container">
+                <div class="circle red" onmouseover="playSound('e_note')" onmouseout="stopSound('e_note')">
                     <div class="stick"></div>
                     <div class="line"></div>
                     <div class="shine"></div>
-                    <div class="bright"></div>
+                    <div class="bright red"></div>
                 </div>
                 <audio id='e_note' src='sounds/mi.wav'>
             </div>
-            <div class="cable-container"> 
+            <div> 
                 <div class="cable"></div>
             </div>
 
+            <div class="ball-container">
+                <div class="circle green" onmouseover="playSound('f_note')" onmouseout="stopSound('f_note')">
+                    <div class="stick"></div>
+                    <div class="line"></div>
+                    <div class="shine"></div>
+                    <div class="bright green"></div>
+                </div>
+                <audio id='f_note' src='sounds/fa.wav'>
+            </div>
+        </div>
+        <div>
+            <button onclick="turnOn()">Turn On!</button>
         </div>
     </body>
 </html>
