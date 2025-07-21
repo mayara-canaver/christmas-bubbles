@@ -1,10 +1,19 @@
 body {
-    background-color: black;
+    background: linear-gradient(135deg, #000a06 0%, #010805 50%, #011309 100%);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
 }
 
 .ball-container-wrapper {
     display: flex;
   }
+
+.lights-row {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
 
 .ball-container {
     width: 150px;
@@ -13,6 +22,25 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
+    animation: swing 4s ease-in-out infinite;
+    transform-origin: top center;
+    z-index: 5;
+}
+
+.ball-container:nth-child(1) {
+    animation-delay: 0.4s;
+}
+
+.ball-container:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+.ball-container:nth-child(5) {
+    animation-delay: 0.2s;
+}
+
+.ball-container:nth-child(7) {
+    animation-delay: 0.3s;
 }
 
 .circle {
@@ -32,12 +60,19 @@ body {
     background: linear-gradient(rgba(2,0,36,1) 0%, rgb(2, 80, 43) 47%, rgb(2, 196, 121) 100%);
 }
 
+.circle.blue {
+    background: linear-gradient(rgba(2,0,36,1) 0%, rgb(2, 43, 80) 47%, rgb(63, 150, 221) 100%);
+}
+
 .stick {
     width: 17px;
     height: 20px;
     background-color: rgb(17, 17, 17);
     position: absolute;
     top: 7px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
 }   
 
 .line {
@@ -60,18 +95,27 @@ body {
 }
 
 .bright {    
-    width: 120%;
-    height: 120%;
-    border-radius: 100px;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
     opacity: 0%;
+    transition: opacity 0.8s ease-out;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .bright.red {
-    background: red;
+    background: radial-gradient(circle, red 0%, rgba(255, 0, 0, 0.8) 30%, rgba(255, 0, 0, 0.5) 40%,  rgba(255, 0, 0, 0.3) 80%, transparent 100%);
 }
 
 .bright.green {
-    background: rgb(5, 136, 23);
+    background: radial-gradient(circle, rgb(5, 136, 23) 0%, rgba(5, 136, 23, 0.8) 30%, rgba(5, 136, 23, 0.5) 40%,  rgba(5, 136, 23, 0.3) 80%, transparent 100%);
+}
+
+.bright.blue {
+    background: radial-gradient(circle, blue 0%, rgba(0, 0, 255, 0.8) 30%, rgba(0, 0, 255, 0.5) 40%, rgba(0, 0, 255, 0.3) 80%, transparent 100%);
 }
 
 .circle:hover .bright{
@@ -87,4 +131,66 @@ body {
     position: absolute;
     top: -70px;
     margin-left: -105px;
+    z-index: 5;
+}
+
+@keyframes slowBlink {
+    0% { opacity: 0.0; }
+    50% { opacity: 0.3; }
+    100% { opacity: 0.0; }
+}
+
+.bright.blinking {
+    animation: slowBlink 3s ease-in-out infinite;
+}
+
+@keyframes swing {
+    0% { transform: rotate(-2deg); }
+    50% { transform: rotate(2deg); }
+    100% { transform: rotate(-2deg); }
+}
+
+.snowflake {
+    position: fixed;
+    top: -10px;
+    width: 4px;
+    height: 4px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.3) 50%, transparent 100%);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 1;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-10px) translateX(0px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) translateX(20px);
+        opacity: 0;
+    }
+}
+
+.snowflake:nth-child(odd) {
+    width: 3px;
+    height: 3px;
+    animation-duration: 8s;
+}
+
+.snowflake:nth-child(3n) {
+    width: 5px;
+    height: 5px;
+    animation-duration: 12s;
+}
+
+.snowflake:nth-child(4n) {
+    animation-duration: 15s;
+}
+
+.snowflake:nth-child(5n) {
+    width: 2px;
+    height: 2px;
+    animation-duration: 6s;
 }
