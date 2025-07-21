@@ -3,62 +3,15 @@
     <head>
         <title>Christmas Balls Song</title>
         <link rel="stylesheet" href="styles/style.css">
-        <script src="scripts/script.js"></script>
     </head>
-    
     <body>
-        <div class="ball-container-wrapper">
-            <div class="ball-container" >
-                <div class="circle red" onmouseover="playSound('c_note')" onmouseout="stopSound('c_note')">
-                    <div class="stick"></div>
-                    <div class="line"></div>
-                    <div class="shine"></div>
-                    <div class="bright red"></div>
-                </div>
-                <audio id='c_note' src='sounds/do.wav'>
-            </div>
-            <div> 
-                <div class="cable"></div>
-            </div>
-
-            <div class="ball-container">
-                <div class="circle green" onmouseover="playSound('d_note')" onmouseout="stopSound('d_note')">
-                    <div class="stick"></div>
-                    <div class="line"></div>
-                    <div class="shine"></div>
-                    <div class="bright green"></div>
-                </div>
-                <audio id='d_note' src='sounds/re.wav'>
-            </div>
-            <div> 
-                <div class="cable"></div>
-            </div>
-
-            <div class="ball-container">
-                <div class="circle red" onmouseover="playSound('e_note')" onmouseout="stopSound('e_note')">
-                    <div class="stick"></div>
-                    <div class="line"></div>
-                    <div class="shine"></div>
-                    <div class="bright red"></div>
-                </div>
-                <audio id='e_note' src='sounds/mi.wav'>
-            </div>
-            <div> 
-                <div class="cable"></div>
-            </div>
-
-            <div class="ball-container">
-                <div class="circle green" onmouseover="playSound('f_note')" onmouseout="stopSound('f_note')">
-                    <div class="stick"></div>
-                    <div class="line"></div>
-                    <div class="shine"></div>
-                    <div class="bright green"></div>
-                </div>
-                <audio id='f_note' src='sounds/fa.wav'>
-            </div>
-        </div>
-        <div>
+        <div id="christmas-lights"></div>
+        
+        <div class="controls">
             <button onclick="turnOn()">Turn On!</button>
+            <button onclick="turnOff()">Turn Off!</button>
         </div>
+        
+        <script src="scripts/script.js"></script>
     </body>
 </html>
